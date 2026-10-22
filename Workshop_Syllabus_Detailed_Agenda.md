@@ -16,7 +16,7 @@ The project context is a **Customer Support Intelligence Platform**. The ticket 
 Every notebook is a **guided, step-by-step walkthrough** rather than a bare exercise sheet:
 
 - **Each step explains three things:** *what* the code does, *why* it is needed, and *what students should see* when it works, so they can check their own progress.
-- **Diagrams support every module** (38 in total, embedded in the notebooks so they also display in Colab): data flow and architecture diagrams, before/after tables, annotated charts, flow charts and sequence diagrams.
+- **Diagrams support every module** (38 in total, loaded from the GitHub `assets/` folder so they display in Colab; students need internet access): data flow and architecture diagrams, before/after tables, annotated charts, flow charts and sequence diagrams.
 - **Short coding tasks (TODOs)** are placed after the explanation, with hints that point to the idea without giving the answer. Complete solutions are provided separately in `solutions/`.
 - **Real numbers from the reference run** (for example 600 tickets, 34.7 % closed) appear in the "what you should see" notes, so students can verify their results and practise reading them critically.
 - **Every notebook ends with a recap table and discussion questions**, and the modules repeatedly stress caveats: missing values, small samples, the difference between a metric and an official SLA, and the limits of AI answers.
