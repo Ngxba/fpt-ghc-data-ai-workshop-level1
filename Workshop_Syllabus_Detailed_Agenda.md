@@ -106,7 +106,7 @@ Every notebook is a **guided, step-by-step walkthrough** rather than a bare exer
 **Lab:** `04_streamlit_app.ipynb` and a prewritten Streamlit template
 
 **Students learn**
-- How a lightweight web interface connects to structured data and AI services, and why Streamlit is a **separate web server** that Colab can only generate a file for.
+- How a lightweight web interface connects to structured data and AI services, and why Streamlit is a **separate web server** (in Colab it runs as a background process, previewed in a private frame under the cell).
 - How Streamlit works: the script reruns from top to bottom on every interaction, with `st.cache_data` and `st.session_state` providing memory.
 - How to organize a prototype into configuration, data retrieval, analysis, presentation, and AI interaction components.
 - Why secrets belong in environment variables, why the app uses a **read-only** database role, and why the schema name is validated.

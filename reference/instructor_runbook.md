@@ -4,7 +4,7 @@
 - **Day before:** Run `00_instructor_setup.ipynb` locally. Preserve `instructor_team_credentials.csv` in a private location (never package it). Test one team via Transaction pooler `6543`. Preload cleaned team_01 data by running solution notebook 1 if wanting an immediate dashboard demo.
 - **Class start:** Send each team ONLY its own password, pooler hostname, project ref and team number. Ensure OpenAI access via own budgeted per-team keys or managed gateway.
 - **At 90 minutes:** Check all groups have run notebook 1; teams needing help can execute the instructor answer snippet.
-- **Streamlit demo:** Set `LAB_APP_DATABASE_URL` (readonly `lab_app_viewer`), `LAB_TEAM_SCHEMAS`, and optionally `OPENAI_API_KEY`; run locally with `streamlit run app/streamlit_app.py`. A Colab kernel cannot directly display a normal Streamlit server without additional deployment.
+- **Streamlit demo:** Set `LAB_APP_DATABASE_URL` (readonly `lab_app_viewer`), `LAB_TEAM_SCHEMAS`, and optionally `OPENAI_API_KEY`; run locally with `streamlit run app/streamlit_app.py`. Students preview their own app inside Colab from notebook 4 ("Preview" cells): it starts Streamlit in the Colab session with their team login and shows it in a private frame. If the frame stays blank for a student, `output.serve_kernel_port_as_window(8501)` opens it in a new tab.
 - **After workshop:** Rotate/revoke passwords, drop team schemas if desired and remove app role. Review OpenAI usage and dataset retention.
 
 ### Example pooled DB URL (do not use literal placeholders)
