@@ -160,7 +160,7 @@ Every notebook is a **guided, step-by-step walkthrough** rather than a bare exer
 
 **Recommended preparation:** Basic Python skills and introductory familiarity with SQL. No prior AI, Supabase, or Streamlit experience is necessary.
 
-**Technical setup:** Student laptop, internet access, browser, and Google Colab or local Jupyter. Instructor manages Supabase PostgreSQL/pgvector, database access, dataset preparation, and OpenAI access arrangements. No student-side Docker or database installation is needed. Students keep credentials in a `.env` file (loaded with `python-dotenv`) or type them in, never inside the notebook.
+**Technical setup:** Student laptop, internet access, browser, and Google Colab or local Jupyter. Instructor manages Supabase PostgreSQL/pgvector, database access, dataset preparation, and OpenAI access arrangements. No student-side Docker or database installation is needed. On Colab, students keep credentials in **Colab Secrets** (read with `google.colab.userdata`); on local Jupyter in a `.env` file (loaded with `python-dotenv`); otherwise they type them in. Never inside the notebook.
 
 **Assessment approach:** Informal, practical checkpoints after each module rather than a formal exam. Successful participation is demonstrated by transformed records, working queries, charts with a written finding and caveat, an RAG response with source references, and participation in the final application review.
 

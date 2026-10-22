@@ -47,10 +47,10 @@ def vector_literal(values):
 def rag_answer(question, team):
     vector = vector_literal(embed(question))
     articles = select_df(f"""SELECT article_id,title,content,
-          1-(embedding <=> %s::extensions.vector) AS similarity
+          1-(embedding OPERATOR(extensions.<=>) %s::extensions.vector) AS similarity
         FROM (SELECT article_id,title,content,embedding FROM shared.knowledge_articles
               UNION ALL SELECT article_id,title,content,embedding FROM {team}.knowledge_articles) kb
-        ORDER BY embedding <=> %s::extensions.vector LIMIT 3""",(vector,vector))
+        ORDER BY embedding OPERATOR(extensions.<=>) %s::extensions.vector LIMIT 3""",(vector,vector))
     ctx = "\n\n".join(f"[{r.article_id}] {r.title}: {r.content}" for r in articles.itertuples())
     answer = OpenAI(api_key=OPENAI_KEY).responses.create(
         model="gpt-4.1-mini",
